@@ -1,0 +1,2245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Birthday Surprise 🎂💖</title>
+
+<style>
+
+/* =====================================================
+   RESET
+===================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    background:#090014;
+
+    color:white;
+
+    overflow-x:hidden;
+}
+
+
+/* =====================================================
+   INTRO SCREEN
+===================================================== */
+
+.intro{
+
+    position:fixed;
+
+    inset:0;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #4b096e,
+            #090014 70%
+        );
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    z-index:9999;
+
+    transition:
+        opacity 1s ease;
+
+}
+
+.intro-content{
+
+    width:90%;
+
+    max-width:650px;
+
+}
+
+.intro-gift{
+
+    font-size:90px;
+
+    animation:
+        giftBounce 1.5s infinite;
+
+}
+
+@keyframes giftBounce{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-15px)
+                   rotate(5deg);
+    }
+
+}
+
+.intro h1{
+
+    font-size:
+        clamp(38px,8vw,75px);
+
+    margin:
+        20px 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            #ff4d94,
+            #ffffff,
+            #c084fc,
+            #ff4d94
+        );
+
+    background-size:
+        300%;
+
+    -webkit-background-clip:text;
+
+    -webkit-text-fill-color:
+        transparent;
+
+    animation:
+        gradientMove 4s linear infinite;
+
+}
+
+@keyframes gradientMove{
+
+    0%{
+        background-position:0%;
+    }
+
+    100%{
+        background-position:300%;
+    }
+
+}
+
+.intro p{
+
+    color:#ddd;
+
+    font-size:18px;
+
+    line-height:1.7;
+
+    margin-bottom:35px;
+
+}
+
+.start-btn{
+
+    padding:
+        18px 35px;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:
+        linear-gradient(
+            45deg,
+            #ff3d81,
+            #a855f7
+        );
+
+    color:white;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    box-shadow:
+        0 0 35px
+        rgba(255,61,129,.6);
+
+    transition:.3s;
+
+}
+
+.start-btn:hover{
+
+    transform:
+        scale(1.1);
+
+    box-shadow:
+        0 0 55px
+        rgba(255,61,129,.9);
+
+}
+
+
+/* =====================================================
+   MAIN
+===================================================== */
+
+main{
+    display:none;
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero{
+
+    min-height:100vh;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+    padding:
+        50px 20px;
+
+    position:relative;
+
+    background:
+
+        radial-gradient(
+            circle at 50% 30%,
+            rgba(255,0,128,.25),
+            transparent 35%
+        ),
+
+        radial-gradient(
+            circle at 20% 80%,
+            rgba(128,0,255,.2),
+            transparent 35%
+        );
+
+}
+
+.hero-content{
+
+    position:relative;
+
+    z-index:5;
+
+}
+
+.small{
+
+    color:#ff9dcc;
+
+    letter-spacing:4px;
+
+    text-transform:
+        uppercase;
+
+    font-size:14px;
+
+}
+
+.hero h1{
+
+    margin-top:15px;
+
+    font-size:
+        clamp(45px,10vw,90px);
+
+    background:
+
+        linear-gradient(
+            90deg,
+            #ff5fa2,
+            #ffffff,
+            #c084fc,
+            #ff5fa2
+        );
+
+    background-size:300%;
+
+    -webkit-background-clip:text;
+
+    -webkit-text-fill-color:
+        transparent;
+
+    animation:
+        gradientMove 4s infinite linear;
+
+}
+
+.hero-name{
+
+    font-size:
+        clamp(28px,6vw,52px);
+
+    margin-top:10px;
+
+    font-weight:bold;
+
+    text-shadow:
+        0 0 25px
+        rgba(255,100,180,.5);
+
+}
+
+.hero p{
+
+    max-width:650px;
+
+    margin:
+        25px auto;
+
+    color:#ddd;
+
+    line-height:1.8;
+
+    font-size:18px;
+
+}
+
+.scroll{
+
+    margin-top:60px;
+
+    opacity:.7;
+
+    animation:
+        scrollBounce 2s infinite;
+
+}
+
+@keyframes scrollBounce{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(12px);
+    }
+
+}
+
+
+/* =====================================================
+   COMMON SECTION
+===================================================== */
+
+section{
+
+    padding:
+        100px 20px;
+
+}
+
+.section-title{
+
+    text-align:center;
+
+    font-size:
+        clamp(30px,6vw,52px);
+
+    margin-bottom:50px;
+
+}
+
+.section-title span{
+
+    color:#ff5fa2;
+
+}
+
+
+/* =====================================================
+   GIFT SECTION
+===================================================== */
+
+.gift-section{
+
+    text-align:center;
+
+    background:
+        linear-gradient(
+            180deg,
+            #090014,
+            #110019
+        );
+
+}
+
+.gift{
+
+    width:180px;
+
+    height:160px;
+
+    margin:
+        60px auto 25px;
+
+    position:relative;
+
+    cursor:pointer;
+
+    transition:
+        .5s;
+
+}
+
+.gift:hover{
+
+    transform:
+        scale(1.1);
+
+}
+
+.gift-box{
+
+    position:absolute;
+
+    width:170px;
+
+    height:110px;
+
+    bottom:0;
+
+    left:5px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff3d81,
+            #c2185b
+        );
+
+    border-radius:10px;
+
+}
+
+.gift-lid{
+
+    position:absolute;
+
+    width:190px;
+
+    height:38px;
+
+    left:-5px;
+
+    top:10px;
+
+    background:
+        #ff5c9a;
+
+    border-radius:8px;
+
+    z-index:3;
+
+    transition:.5s;
+
+}
+
+.ribbon{
+
+    position:absolute;
+
+    width:28px;
+
+    height:150px;
+
+    background:
+        #ffd166;
+
+    left:76px;
+
+    top:10px;
+
+    z-index:4;
+
+}
+
+.ribbon-horizontal{
+
+    position:absolute;
+
+    width:190px;
+
+    height:20px;
+
+    background:
+        #ffd166;
+
+    left:-5px;
+
+    top:20px;
+
+    z-index:5;
+
+    border-radius:5px;
+
+}
+
+.gift-text{
+
+    color:#aaa;
+
+    font-size:17px;
+
+}
+
+
+/* =====================================================
+   SURPRISE BOX
+===================================================== */
+
+.surprise{
+
+    display:none;
+
+    max-width:700px;
+
+    margin:
+        50px auto 0;
+
+    padding:35px;
+
+    border-radius:25px;
+
+    background:
+        rgba(255,255,255,.07);
+
+    border:
+        1px solid
+        rgba(255,255,255,.15);
+
+    animation:
+        appear .8s ease;
+
+}
+
+@keyframes appear{
+
+    from{
+
+        opacity:0;
+
+        transform:
+            translateY(30px)
+            scale(.9);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+            translateY(0)
+            scale(1);
+
+    }
+
+}
+
+.surprise h2{
+
+    color:#ff80b5;
+
+    font-size:36px;
+
+    margin-bottom:20px;
+
+}
+
+.surprise p{
+
+    color:#ddd;
+
+    line-height:1.9;
+
+    font-size:17px;
+
+}
+
+
+/* =====================================================
+   CAKE
+===================================================== */
+
+.cake-section{
+
+    text-align:center;
+
+    background:
+        #110019;
+
+}
+
+.cake{
+
+    font-size:
+        130px;
+
+    display:inline-block;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.cake:hover{
+
+    transform:
+        scale(1.12)
+        rotate(-4deg);
+
+}
+
+.cake-message{
+
+    color:#aaa;
+
+    margin-top:20px;
+
+}
+
+
+/* =====================================================
+   LETTER
+===================================================== */
+
+.letter-section{
+
+    background:
+        #100018;
+
+}
+
+.letter{
+
+    max-width:760px;
+
+    margin:auto;
+
+    background:
+        #fffaf2;
+
+    color:#3a2430;
+
+    padding:45px;
+
+    border-radius:6px;
+
+    box-shadow:
+        0 25px 70px
+        rgba(0,0,0,.5);
+
+    transform:
+        rotate(-1deg);
+
+}
+
+.letter h2{
+
+    text-align:center;
+
+    color:#d6336c;
+
+    margin-bottom:25px;
+
+    font-size:30px;
+
+}
+
+.letter p{
+
+    line-height:2;
+
+    font-size:18px;
+
+}
+
+.signature{
+
+    margin-top:30px;
+
+    text-align:right;
+
+    font-size:22px;
+
+    font-weight:bold;
+
+    color:#d6336c;
+
+}
+
+
+/* =====================================================
+   MEMORIES
+===================================================== */
+
+.memories{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(220px,1fr)
+        );
+
+    gap:25px;
+
+    max-width:1000px;
+
+    margin:auto;
+
+}
+
+.memory{
+
+    min-height:250px;
+
+    padding:25px;
+
+    border-radius:25px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.12),
+            rgba(255,255,255,.03)
+        );
+
+    border:
+        1px solid
+        rgba(255,255,255,.1);
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    transition:.4s;
+
+}
+
+.memory:hover{
+
+    transform:
+        translateY(-10px)
+        rotate(1deg);
+
+    box-shadow:
+        0 20px 45px
+        rgba(255,0,128,.15);
+
+}
+
+.memory-icon{
+
+    font-size:55px;
+
+    margin-bottom:15px;
+
+}
+
+.memory h3{
+
+    color:#ff75ad;
+
+    margin-bottom:10px;
+
+}
+
+.memory p{
+
+    color:#bbb;
+
+    line-height:1.6;
+
+}
+
+
+/* =====================================================
+   FINAL SECTION
+===================================================== */
+
+.final{
+
+    min-height:90vh;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+    padding:
+        80px 20px;
+
+    background:
+
+        radial-gradient(
+            circle,
+            #42005e,
+            #090014 70%
+        );
+
+}
+
+.final-content{
+
+    max-width:700px;
+
+}
+
+.final-heart{
+
+    font-size:90px;
+
+    animation:
+        heartbeat 1.5s infinite;
+
+}
+
+@keyframes heartbeat{
+
+    0%,100%{
+        transform:scale(1);
+    }
+
+    50%{
+        transform:scale(1.2);
+    }
+
+}
+
+.final h2{
+
+    font-size:
+        clamp(40px,8vw,70px);
+
+    margin:
+        20px 0;
+
+}
+
+.final p{
+
+    color:#ddd;
+
+    font-size:18px;
+
+    line-height:1.9;
+
+}
+
+
+/* =====================================================
+   MUSIC BUTTON
+===================================================== */
+
+.music{
+
+    position:fixed;
+
+    right:20px;
+
+    bottom:20px;
+
+    width:58px;
+
+    height:58px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff3d81,
+            #a855f7
+        );
+
+    color:white;
+
+    font-size:23px;
+
+    cursor:pointer;
+
+    z-index:500;
+
+    box-shadow:
+        0 0 25px
+        rgba(255,61,129,.5);
+
+    transition:.3s;
+
+}
+
+.music:hover{
+
+    transform:
+        scale(1.1);
+
+}
+
+
+/* =====================================================
+   FLOATING HEARTS
+===================================================== */
+
+.heart{
+
+    position:fixed;
+
+    bottom:-40px;
+
+    font-size:25px;
+
+    z-index:100;
+
+    pointer-events:none;
+
+    animation:
+        heartFloat
+        6s
+        linear
+        forwards;
+
+}
+
+@keyframes heartFloat{
+
+    0%{
+
+        opacity:0;
+
+        transform:
+            translateY(0)
+            scale(.5);
+
+    }
+
+    20%{
+        opacity:1;
+    }
+
+    100%{
+
+        opacity:0;
+
+        transform:
+            translateY(-110vh)
+            scale(1.5)
+            rotate(30deg);
+
+    }
+
+}
+
+
+/* =====================================================
+   CONFETTI
+===================================================== */
+
+.confetti{
+
+    position:fixed;
+
+    top:-20px;
+
+    width:9px;
+
+    height:9px;
+
+    z-index:300;
+
+    pointer-events:none;
+
+    animation:
+        confettiFall
+        linear
+        forwards;
+
+}
+
+@keyframes confettiFall{
+
+    0%{
+
+        transform:
+            translateY(0)
+            rotate(0);
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        transform:
+            translateY(110vh)
+            rotate(720deg);
+
+        opacity:0;
+
+    }
+
+}
+
+
+/* =====================================================
+   FIREWORK SPARK
+===================================================== */
+
+.spark{
+
+    position:fixed;
+
+    width:5px;
+
+    height:5px;
+
+    border-radius:50%;
+
+    z-index:400;
+
+    pointer-events:none;
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:600px){
+
+    section{
+
+        padding:
+            75px 15px;
+
+    }
+
+    .intro h1{
+
+        font-size:
+            42px;
+
+    }
+
+    .letter{
+
+        padding:25px;
+
+        transform:
+            rotate(0);
+
+    }
+
+    .letter p{
+
+        font-size:16px;
+
+    }
+
+    .cake{
+
+        font-size:100px;
+
+    }
+
+    .gift{
+
+        transform:
+            scale(.9);
+
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     INTRO
+===================================================== -->
+
+<div
+    class="intro"
+    id="intro"
+>
+
+    <div class="intro-content">
+
+        <div class="intro-gift">
+            🎁
+        </div>
+
+        <h1>
+            I Made Something<br>
+            For You...
+        </h1>
+
+        <p>
+
+            This isn't just a birthday wish.
+
+            <br>
+
+            It's a little surprise made
+            especially for you. ❤️
+
+            <br><br>
+
+            Promise me you'll smile. 😌
+
+        </p>
+
+        <button
+            class="start-btn"
+            onclick="startExperience()"
+        >
+
+            Open Your Surprise 💖
+
+        </button>
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     MAIN WEBSITE
+===================================================== -->
+
+<main id="main">
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="small">
+            Today is a very special day ✨
+        </div>
+
+        <h1>
+            HAPPY BIRTHDAY
+        </h1>
+
+        <!-- CHANGE HER NAME -->
+
+        <div class="hero-name">
+            Tillu 💖
+        </div>
+
+        <p>
+            Life gave me a sister,
+            but honestly, it also gave me
+            one of my best friends. ❤️
+        </p>
+
+        <div class="scroll">
+
+            ↓ Keep scrolling... ↓
+            <br>
+            I have more surprises for you ❤️
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     GIFT
+===================================================== -->
+
+<section class="gift-section">
+
+    <h2 class="section-title">
+
+        Your First
+        <span>Surprise 🎁</span>
+
+    </h2>
+
+    <p>
+        I know you're curious... 😏
+    </p>
+
+
+    <div
+        class="gift"
+        id="gift"
+        onclick="openGift()"
+    >
+
+        <div class="gift-lid"></div>
+
+        <div class="gift-box"></div>
+
+        <div class="ribbon"></div>
+
+        <div class="ribbon-horizontal"></div>
+
+    </div>
+
+
+    <div class="gift-text">
+
+        👆 Click the gift
+
+    </div>
+
+
+    <div
+        class="surprise"
+        id="surprise"
+    >
+
+        <h2>
+            Surprise! 🥳
+        </h2>
+
+        <p>
+
+            You actually opened it! 😂
+
+            <br><br>
+
+            But here's the thing...
+
+            <br><br>
+
+            🎁 This wasn't the real surprise.
+
+            <br><br>
+
+            Keep scrolling.
+
+            <br>
+
+            The best part is still waiting for you. ❤️
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CAKE
+===================================================== -->
+
+<section class="cake-section">
+
+    <h2 class="section-title">
+
+        Make A
+        <span>Wish 🎂</span>
+
+    </h2>
+
+
+    <div
+        class="cake"
+        id="cake"
+        onclick="blowCandles()"
+    >
+
+        🎂
+
+    </div>
+
+
+    <p
+        class="cake-message"
+        id="cakeMessage"
+    >
+
+        Click the cake and make a wish ✨
+
+    </p>
+
+</section>
+
+
+
+<!-- =====================================================
+     LETTER
+===================================================== -->
+
+<section class="letter-section">
+
+    <h2 class="section-title">
+
+        A Little
+        <span>Letter 💌</span>
+
+    </h2>
+
+
+    <div class="letter">
+
+    <h2>
+        Dear Sister ❤️
+    </h2>
+
+    <p>
+
+        Happy Birthday to the most amazing
+        sister in the world! 🎂🥳
+
+        <br><br>
+
+        We've grown up together, shared
+        countless laughs, argued over the
+        smallest things 😂, and created
+        memories that I'll always treasure.
+
+        <br><br>
+
+        You may annoy me sometimes...
+        okay, maybe a LOT sometimes! 😂
+
+        But no matter how much we fight,
+        you'll always be one of the most
+        important people in my life.
+
+        <br><br>
+
+        I'm incredibly lucky to call you
+        my sister. ❤️
+
+        <br><br>
+
+        On your birthday, I wish you
+        happiness that never ends,
+        dreams that become reality,
+        success in everything you do,
+        and a life filled with beautiful
+        memories.
+
+        <br><br>
+
+        Always keep smiling,
+        always keep shining,
+        and never change the wonderful
+        person you are. ✨
+
+        <br><br>
+
+        No matter where life takes us,
+        I'll always be there for you.
+
+        <br><br>
+
+        <b>
+            Happy Birthday, Sis! 🎂💖
+        </b>
+
+    </p>
+
+    <div class="signature">
+
+        With lots of love,<br>
+        Your Brother ❤️
+
+    </div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SPECIAL THINGS
+===================================================== -->
+
+<section>
+
+    <h2 class="section-title">
+
+        Things That Make You
+        <span>Special ✨</span>
+
+    </h2>
+
+
+    <div class="memories">
+
+
+        <div class="memory">
+
+            <div class="memory-icon">
+                😂
+            </div>
+
+            <h3>
+                Your Laugh
+            </h3>
+
+            <p>
+
+                Somehow your laughter makes
+                everyone around you laugh too.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="memory">
+
+            <div class="memory-icon">
+                💖
+            </div>
+
+            <h3>
+                Your Heart
+            </h3>
+
+            <p>
+
+                You care more than you probably
+                realize.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="memory">
+
+            <div class="memory-icon">
+                🌸
+            </div>
+
+            <h3>
+                Your Vibe
+            </h3>
+
+            <p>
+
+                You have a way of making ordinary
+                moments much more fun.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="memory">
+
+            <div class="memory-icon">
+                ✨
+            </div>
+
+            <h3>
+                Your Smile
+            </h3>
+
+            <p>
+
+                Never stop smiling.
+
+                It suits you way too much.
+
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FINAL
+===================================================== -->
+
+<section class="final">
+
+    <div class="final-content">
+
+
+        <div class="final-heart">
+            ❤️
+        </div>
+
+
+        <h2>
+            One Last Thing...
+        </h2>
+
+
+        <p>
+
+            No matter how old you get,
+            you'll always be that crazy cousin
+            who makes family moments better. 😄
+
+            <br><br>
+
+            So here's to another year of
+
+            <br>
+
+            adventures,
+            laughter,
+            memories,
+            happiness
+            and success. ✨
+
+            <br><br>
+
+            May your smile always be bigger
+            than your problems.
+
+            <br><br>
+
+            <b>
+                HAPPY BIRTHDAY! 🎂🎉
+            </b>
+
+            <br><br>
+
+            🎈 🎂 🥳 💖 ✨
+
+        </p>
+
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- =====================================================
+     MUSIC BUTTON
+===================================================== -->
+
+<button
+    class="music"
+    id="musicButton"
+    onclick="toggleMusic()"
+    title="Play birthday music"
+>
+
+    🎵
+
+</button>
+
+
+
+<script>
+
+/* =====================================================
+   START EXPERIENCE
+===================================================== */
+
+function startExperience(){
+
+    const intro =
+        document.getElementById("intro");
+
+    const main =
+        document.getElementById("main");
+
+
+    intro.style.opacity="0";
+
+
+    setTimeout(function(){
+
+        intro.style.display="none";
+
+        main.style.display="block";
+
+
+        // Start celebration
+
+        createConfetti();
+
+        fireworks();
+
+    },1000);
+
+}
+
+
+/* =====================================================
+   OPEN GIFT
+===================================================== */
+
+function openGift(){
+
+    const gift =
+        document.getElementById("gift");
+
+    const lid =
+        document.querySelector(".gift-lid");
+
+    const surprise =
+        document.getElementById("surprise");
+
+
+    /* Open lid */
+
+    lid.style.transform =
+        "translateY(-65px) rotate(-8deg)";
+
+
+    createConfetti();
+
+    createHearts();
+
+
+    setTimeout(function(){
+
+        surprise.style.display="block";
+
+
+        surprise.scrollIntoView({
+
+            behavior:"smooth",
+
+            block:"center"
+
+        });
+
+    },500);
+
+}
+
+
+/* =====================================================
+   CAKE
+===================================================== */
+
+function blowCandles(){
+
+    const cake =
+        document.getElementById("cake");
+
+    const message =
+        document.getElementById("cakeMessage");
+
+
+    cake.innerHTML="🍰";
+
+
+    message.innerHTML =
+        "✨ Your wish has been sent to the universe! ✨";
+
+
+    createConfetti();
+
+    createHearts();
+
+    fireworks();
+
+}
+
+
+/* =====================================================
+   CONFETTI
+===================================================== */
+
+function createConfetti(){
+
+    const shapes=[
+        "●",
+        "■",
+        "◆",
+        "★"
+    ];
+
+
+    for(
+        let i=0;
+        i<120;
+        i++
+    ){
+
+        const confetti =
+            document.createElement("div");
+
+
+        confetti.className =
+            "confetti";
+
+
+        confetti.innerHTML =
+            shapes[
+                Math.floor(
+                    Math.random() *
+                    shapes.length
+                )
+            ];
+
+
+        confetti.style.left =
+            Math.random()*100+"vw";
+
+
+        confetti.style.color =
+            `hsl(
+                ${Math.random()*360},
+                100%,
+                70%
+            )`;
+
+
+        const duration =
+            2+
+            Math.random()*4;
+
+
+        confetti.style.animationDuration =
+            duration+"s";
+
+
+        document.body.appendChild(
+            confetti
+        );
+
+
+        setTimeout(function(){
+
+            confetti.remove();
+
+        },(duration+1)*1000);
+
+    }
+
+}
+
+
+/* =====================================================
+   HEARTS
+===================================================== */
+
+function createHearts(){
+
+    const hearts=[
+        "❤️",
+        "💖",
+        "💕",
+        "💗",
+        "💝",
+        "💓"
+    ];
+
+
+    for(
+        let i=0;
+        i<30;
+        i++
+    ){
+
+        const heart =
+            document.createElement("div");
+
+
+        heart.className="heart";
+
+
+        heart.innerHTML =
+            hearts[
+                Math.floor(
+                    Math.random()*
+                    hearts.length
+                )
+            ];
+
+
+        heart.style.left =
+            Math.random()*100+"vw";
+
+
+        heart.style.animationDuration =
+            (4+
+            Math.random()*4)+"s";
+
+
+        heart.style.animationDelay =
+            Math.random()*1.5+"s";
+
+
+        document.body.appendChild(
+            heart
+        );
+
+
+        setTimeout(function(){
+
+            heart.remove();
+
+        },9000);
+
+    }
+
+}
+
+
+/* =====================================================
+   FIREWORKS
+===================================================== */
+
+function fireworks(){
+
+    for(
+        let i=0;
+        i<7;
+        i++
+    ){
+
+        setTimeout(function(){
+
+            const centerX =
+                15+
+                Math.random()*70;
+
+            const centerY =
+                10+
+                Math.random()*45;
+
+
+            for(
+                let j=0;
+                j<35;
+                j++
+            ){
+
+                const spark =
+                    document.createElement("div");
+
+
+                spark.className="spark";
+
+
+                spark.style.left =
+                    centerX+"vw";
+
+
+                spark.style.top =
+                    centerY+"vh";
+
+
+                spark.style.background =
+                    `hsl(
+                        ${Math.random()*360},
+                        100%,
+                        70%
+                    )`;
+
+
+                const angle =
+                    Math.random()*
+                    Math.PI*2;
+
+
+                const distance =
+                    50+
+                    Math.random()*150;
+
+
+                const x =
+                    Math.cos(angle)*
+                    distance;
+
+
+                const y =
+                    Math.sin(angle)*
+                    distance;
+
+
+                const animation =
+                    spark.animate(
+
+                        [
+                            {
+                                transform:
+                                    "translate(0,0) scale(1)",
+                                opacity:1
+                            },
+
+                            {
+                                transform:
+                                    `translate(
+                                        ${x}px,
+                                        ${y}px
+                                    ) scale(0)`,
+                                opacity:0
+                            }
+                        ],
+
+                        {
+                            duration:
+                                1000+
+                                Math.random()*1000,
+
+                            easing:
+                                "cubic-bezier(.2,.8,.3,1)"
+                        }
+
+                    );
+
+
+                document.body.appendChild(
+                    spark
+                );
+
+
+                animation.finished
+                    .then(function(){
+
+                        spark.remove();
+
+                    });
+
+            }
+
+        },i*600);
+
+    }
+
+}
+
+
+/* =====================================================
+   GENERATED BIRTHDAY MUSIC
+===================================================== */
+
+let musicPlaying=false;
+
+let audioContext=null;
+
+let musicTimer=null;
+
+
+function playNote(
+    frequency,
+    startTime,
+    duration
+){
+
+    const oscillator =
+        audioContext.createOscillator();
+
+
+    const gain =
+        audioContext.createGain();
+
+
+    oscillator.type="sine";
+
+
+    oscillator.frequency.setValueAtTime(
+        frequency,
+        startTime
+    );
+
+
+    gain.gain.setValueAtTime(
+        0,
+        startTime
+    );
+
+
+    gain.gain.linearRampToValueAtTime(
+        0.12,
+        startTime+0.03
+    );
+
+
+    gain.gain.exponentialRampToValueAtTime(
+        0.001,
+        startTime+duration
+    );
+
+
+    oscillator.connect(gain);
+
+    gain.connect(
+        audioContext.destination
+    );
+
+
+    oscillator.start(startTime);
+
+    oscillator.stop(
+        startTime+duration
+    );
+
+}
+
+
+/* =====================================================
+   BIRTHDAY MELODY
+===================================================== */
+
+function playBirthdayMelody(){
+
+    if(!musicPlaying){
+        return;
+    }
+
+
+    const now =
+        audioContext.currentTime;
+
+
+    const notes=[
+
+        261.63,
+        261.63,
+        293.66,
+        261.63,
+        349.23,
+        329.63,
+
+        261.63,
+        261.63,
+        293.66,
+        261.63,
+        392.00,
+        349.23,
+
+        261.63,
+        261.63,
+        523.25,
+        440.00,
+        349.23,
+        329.63,
+        293.66,
+
+        466.16,
+        466.16,
+        440.00,
+        349.23,
+        392.00,
+        349.23
+
+    ];
+
+
+    notes.forEach(
+        function(note,index){
+
+            playNote(
+
+                note,
+
+                now+
+                index*0.35,
+
+                0.30
+
+            );
+
+        }
+    );
+
+
+    musicTimer =
+        setTimeout(
+
+            playBirthdayMelody,
+
+            notes.length*
+            350+
+            700
+
+        );
+
+}
+
+
+/* =====================================================
+   MUSIC BUTTON
+===================================================== */
+
+function toggleMusic(){
+
+    const button =
+        document.getElementById(
+            "musicButton"
+        );
+
+
+    /* PLAY */
+
+    if(!musicPlaying){
+
+        try{
+
+            audioContext =
+                new(
+                    window.AudioContext ||
+                    window.webkitAudioContext
+                )();
+
+
+            if(
+                audioContext.state ===
+                "suspended"
+            ){
+
+                audioContext.resume();
+
+            }
+
+
+            musicPlaying=true;
+
+
+            button.innerHTML="🔊";
+
+            button.title=
+                "Pause birthday music";
+
+
+            playBirthdayMelody();
+
+
+        }catch(error){
+
+            alert(
+                "Your browser does not support audio."
+            );
+
+        }
+
+
+    }
+
+    /* PAUSE */
+
+    else{
+
+        musicPlaying=false;
+
+
+        clearTimeout(
+            musicTimer
+        );
+
+
+        if(audioContext){
+
+            audioContext.suspend();
+
+        }
+
+
+        button.innerHTML="🎵";
+
+        button.title=
+            "Play birthday music";
+
+    }
+
+}
+
+
+/* =====================================================
+   AUTOMATIC FLOATING HEARTS
+===================================================== */
+
+setInterval(
+
+    function(){
+
+        if(
+            document.getElementById(
+                "main"
+            ).style.display === "block"
+        ){
+
+            if(
+                Math.random()>.4
+            ){
+
+                createHearts();
+
+            }
+
+        }
+
+    },
+
+    9000
+
+);
+
+</script>
+
+</body>
+
+</html>
